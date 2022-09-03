@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.User" table="user" catalog="user_db" optimistic-lock="version">
+
+        <meta attribute="class-description">
+            This class contains the person details
+        </meta>
+
+        <id name="id" type="int" column="id">
+            <generator class="increment"/>
+        </id>
+
+        <property name="name" column="name" type="string"/>
+        <property name="last_name" column="last_name" type="string"/>
+        <property name="age" column="age" type="int"/>
+        <property name="adress" column="adress" type="string"/>
+        <property name="income" column="income" type="double"/>
+
+    </class>
+</hibernate-mapping>
